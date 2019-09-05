@@ -14,10 +14,11 @@ module.exports = {
   development: {
     client: "postgresql",
     connection: process.env.POSTGRES_URL || {
-      user: "veil",
+      user: "coi",
       host: "127.0.0.1",
       port: "5432",
-      database: "veil_market_creation"
+      database: "coi_market_creation",
+      password: process.env.DATABASE_ACCESS_KEY
     },
     pool: {
       min: 2,
@@ -33,10 +34,10 @@ module.exports = {
   test: {
     client: "postgresql",
     connection: process.env.POSTGRES_URL_TEST || {
-      user: "veil",
+      user: "coi",
       host: "127.0.0.1",
       port: "5432",
-      database: "veil_market_creation_test"
+      database: "coi_market_creation_test"
     },
     pool: {
       min: 2,
